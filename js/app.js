@@ -103,21 +103,21 @@ Player.prototype.handleInput = (function(key) {
 
     if (this.x < 0) {
         this.x = 0;
-        player = new Player(200, 400, 'images/char-cat-girl.png');
+
     }
 
     if (this.x > 400) {
         this.x = 400;
-        player = new Player(200, 400, 'images/char-pink-girl.png');
+
     }
 
     if (this.y > 400) {
         this.y = 400;
-        player = new Player(200, 400, 'images/char-princess-girl.png');
+
     }
     if (this.y <= 0) {
         alert("game won");
-        player = new Player(200, 400, 'images/char-boy.png');
+
         this.y = 400;
     }
 
