@@ -53,7 +53,7 @@ Player.prototype.resetPlayer = function() {
 };
 
 //this code checks if collision has occured if occured it will reset
-Enemy.prototype.checkCollission = function(i) {
+Enemy.prototype.checkCollission = function() {
     if (this.x < player.x + 90 && this.x + 100 > player.x && this.y < player.y + 80 && 70 + this.y > player.y) {
         player.resetPlayer();
     }
@@ -122,7 +122,7 @@ Player.prototype.handleInput = (function(key) {
     }
 
     //check for collision
-    for (var i = 0; i < allEnemies.length; i++) {
+    for (var i = 0; i < 4; i++) {
         allEnemies[i].checkCollission(i);
     }
 });
