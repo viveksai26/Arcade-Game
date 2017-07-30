@@ -14,6 +14,9 @@ Enemy.prototype.update = function(dt) {
         this.x = 0;
     }
     this.x += this.speed * dt;
+     for (var i = 0; i < 4; i++) {
+        allEnemies[i].checkCollission(i);
+    };
 };
 
 // Draw the enemy on the screen, required method for game
@@ -38,8 +41,9 @@ var Player = function(x, y, image) {
 };
 // Update the player's position, required method for game
 // Parameter: dt, a time delta between ticks
-Player.prototype.update = function(dt) {};
+Player.prototype.update = function(dt) {;
 
+};
 // Draw the player on the screen, required method for game
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -122,7 +126,5 @@ Player.prototype.handleInput = (function(key) {
     }
 
     //check for collision
-    for (var i = 0; i < 4; i++) {
-        allEnemies[i].checkCollission(i);
-    }
+
 });
