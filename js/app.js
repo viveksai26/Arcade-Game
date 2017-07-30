@@ -13,10 +13,8 @@ Enemy.prototype.update = function(dt) {
     if (this.x >= 500) {
         this.x = 0;
     }
+    this.checkCollission();
     this.x += this.speed * dt;
-     for (var i = 0; i < 4; i++) {
-        allEnemies[i].checkCollission(i);
-    };
 };
 
 // Draw the enemy on the screen, required method for game
